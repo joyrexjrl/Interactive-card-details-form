@@ -74,8 +74,6 @@ select {
   }
 }
 
-/*font-family: 'Space Grotesk', sans-serif;*/
-
 :root{
     --linear-gradient: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%)); /*(active input border)*/
     --red: hsl(0, 100%, 66%); /*(input errors)*/
@@ -87,4 +85,188 @@ select {
 
 body{
     font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #222;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.container{
+    width: 80%;
+    max-width: 375px;
+    background-color: #fff;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* card head start */
+
+.card-head{
+    background-image: url(images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    position: relative;
+    height: 300px;
+}
+
+.card-back, .card-front{
+    width: 280px;
+    position: absolute;
+}
+
+.card-back{
+    top: 10%;
+    right: 5%;
+}
+
+.card-back-cvc{
+    position: absolute;
+    color: white;
+    font-size: .7rem;
+    top: 49%;
+    left: 84%;
+    transform: translate(-50%, -50%);
+}
+
+.card-front{
+    top: 39%;
+    left: 5%;
+}
+
+.card-front-info{
+    position: absolute;
+    inset: 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 60px;
+}
+
+.card-front-number{
+    color: white;
+    padding-bottom: 1rem;
+    letter-spacing: 2.5px;
+}
+
+.card-name-date{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    text-transform: uppercase;
+    font-size: .7rem;
+}
+
+/* card head end */
+
+/* form start */
+
+.form-area{
+    width: 90%;
+    margin-inline: auto;
+}
+
+.form-flex{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+label{
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: var(--very-dark-violet);
+}
+
+.top-form-input{
+    width: 100%;
+}
+
+.form-bottom{
+    display: flex;
+    gap: .7rem;
+}
+
+.form-bottom input{
+    width: 100%;    
+}
+
+.form-date,.form-year{
+    width: 30%;
+}
+
+.form-cvc{
+    width: 60%;
+}
+
+.form-input{
+    border: 1px solid var(--light-grayish-violet);
+    border-radius: 5px;
+    color: var(--dark-grayish-violet);
+    padding: .5rem;
+}
+
+.button{
+    text-decoration: none;
+    background-color: var(--very-dark-violet);
+    text-align: center;
+    color: white;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* form end */
+/* complete start */
+
+.complete-section{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-inline: auto;
+    text-align: center;
+    gap: 1rem;
+}
+
+.complete-logo{
+    width: 80px;
+    margin-inline: auto;
+}
+
+.complete-thanks{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--very-dark-violet);
+}
+
+.complete-info{
+    color: var(--dark-grayish-violet);
+}
+
+/* complete end */
+
+.attribution{
+    width: 90%;
+    margin-inline: auto;
+    color: var(--very-dark-violet);
+    font-size: .8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.attribution a{
+    text-decoration: none;
+    color: var(--very-dark-violet);
+    transition: .2s ease-in;
+}
+
+.attribution a:hover{
+    color: var(--dark-grayish-violet);
 }
