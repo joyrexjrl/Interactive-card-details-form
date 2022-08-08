@@ -223,8 +223,33 @@ label{
     border-radius: 5px;
     cursor: pointer;
 }
+
+.error-text{
+    position: absolute;
+    color: var(--red);
+    font-size: .6rem;    
+}
+
+input:required{
+    border: 1px solid var(--red);
+}
+
+input:valid{
+    border: 1px solid green;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
 /* form end */
-/* complete start */
+/* complete section start */
 
 .complete-section{
     display: flex;
@@ -250,7 +275,7 @@ label{
     color: var(--dark-grayish-violet);
 }
 
-/* complete end */
+/* complete section end */
 
 .attribution{
     width: 90%;
@@ -269,4 +294,39 @@ label{
 
 .attribution a:hover{
     color: var(--dark-grayish-violet);
+}
+
+@media (min-width: 1100px) {
+    .container{
+        max-width: 1100px;
+    }
+
+    .desktop-container{
+        display: flex;
+    }
+
+    .card-head{
+        background-image: url(images/bg-main-desktop.png);
+        width: 35%;
+        height: 600px;
+    }
+
+    .card-back{
+        top: 50%;
+        right: -35%;
+    }
+
+    .card-front{
+        top: 20%;
+        left: 45%;
+    }
+
+    .desktop-form-container{
+        width: 60%;
+        max-width: 350px;
+        position: absolute;
+        top: 50%;
+        left: 68%;
+        transform: translate(-50%, -50%);
+    }
 }
